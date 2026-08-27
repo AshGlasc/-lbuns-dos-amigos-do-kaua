@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+}
+ 
+/*estilo do botão de busca*/
+ 
+#busca {
+  display: block;
+  margin: 20px auto;
+  padding: 8px 12px;
+
+  font-size: 16px;
+  border: 2px solid #0e0000;
+    border-radius: 100px;
+    
+  transition: background-color 0.3s ease;
+}
+
+#busca:hover {
+  background-color: #cdcfcdce;
+}
+ 
+
+/*estilo do título HUB */ 
+
+h3 {
+  margin-top: 33px;
+  font-size: 35px;
+  color: #000000;
+  text-align: center;
+  background-color: #664d279f;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+
+/* estilo das fotos */
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.albuns {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 24px;
+  justify-content: center;
+}
+
+.albuns.oculto {
+  display: none;
+}
+
+.album.escondido {
+  display: none; /* oculto por padrão */
+}
+
+.fotos-album {
+  display: none; /* oculto por padrão */
+}
+
+.fotos-album.aberto {
+  display: grid; /* exibe quando a classe "aberto" é adicionada */
+  grid-template-columns: repeat(3, 300px);
+  gap: 24px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.fotos-album button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.foto {
+  width: 315px;
+  box-sizing: border-box;
+  background: #49ef97;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+                  /* desativado temporariamente, antigo zoom */
+/* .foto:hover { 
+  transform: scale(1.05);
+} */
+
+.foto img {
+  display: block;
+  border-radius: 8px;
+ }
+
+
+.foto figcaption {
+  margin-top: 8px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+}
+
+/* Estilo da imagem ampliada */
+
+.grande:hover {
+  transform: scale(1.6);
+  transition: 0.6s;
+}
+
+/* estilo botão voltar */
+
+#button_voltar {
+  background-color: #14e31b;
+  border: 3px solid #0e0000;
+  border-radius: 100px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#button_voltar:hover {
+  background-color: #00f400;
+}
