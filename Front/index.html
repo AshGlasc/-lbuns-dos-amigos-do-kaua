@@ -1,171 +1,185 @@
 <!DOCTYPE html>
+<!-- Documento principal da página do museu de fotos. -->
 <html lang="pt-br">
   <head>
+    <!-- Define a codificação para permitir acentos e caracteres especiais. -->
     <meta charset="utf-8">
+    <!-- Faz a página se adaptar à largura de celulares e tablets. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="icon" href="favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="style.css">
+    <!-- Define o ícone exibido na aba do navegador. -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Carrega os estilos visuais da página. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Carrega o JavaScript depois que o HTML for interpretado. -->
     <script src="../Java_script.js" defer></script>
+    <!-- Texto exibido na aba do navegador. -->
     <title>Múseu do Kauã</title>
   </head>
   <body>
+    <!-- Título e apresentação do conteúdo da página. -->
     <h1>Fotos do Kauã M. Rebs</h1>
     <h2>Você gosta do Kauã? Se sim. Aqui temos:</h2>
+
+    <!-- Lista de categorias de fotos disponíveis no site. -->
     <ul style="list-style-type: circle;">
-        <li>Fotos dele feliz</li>
-        <li>Fotos dele triste</li>
-        <li>fotos dele farmando aura</li>
-        <li>Fotos dele  (plano diário de R$150,67)</li>
-      </ul>
+      <li>Fotos dele feliz</li>
+      <li>Fotos dele triste</li>
+      <li>fotos dele farmando aura</li>
+      <li>Fotos dele (plano diário de R$150,67)</li>
+    </ul>
 
-      <input type="text" id="busca" class="busca" placeholder="Buscar foto fofinha" onkeyup="filtrar()">
+    <!-- Campo que dispara a filtragem enquanto o usuário digita. -->
+    <input type="text" id="busca" class="busca" placeholder="Buscar foto fofinha" onkeyup="filtrar()">
 
-      <h3>Hub de fotos</h3>
+    <!-- Título da área que reúne os cartões dos álbuns. -->
+    <h3>Hub de fotos</h3>
 
-      <div class="albuns">
-        <!-- album do kaua -->
-        <div class="album" data-album="fotos-kaua" onclick="abrir_album('fotos-kaua')">
-          <img src="fotos/Fotos - kaua/kaua.png" alt="Kaua" width="300" height="300">
-          <h3>album kaua</h3>
-        </div>
-
-        <!-- album do Nicolas -->
-        <div class="album" data-album="fotos-nicolas" onclick="abrir_album('fotos-nicolas')">
-          <img src="fotos/Fotos - Nicolas/NicolasPoseAura.jpg" alt="Nicolas" width="300" height="300">
-          <h3>FOTOS - NICOLAS</h3>
-        </div>
+    <!-- Cartões usados para escolher qual álbum será aberto. -->
+    <div class="albuns">
+      <!-- Álbum do Kauã. -->
+      <div class="album" data-album="fotos-kaua" onclick="abrir_album('fotos-kaua')">
+        <img src="fotos/Fotos - kaua/kaua.png" alt="Kaua" width="300" height="300">
+        <h3>album kaua</h3>
       </div>
-    
-  <div id="fotos-kaua" class="FotosKaua fotos-album"> 
-    <button id="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
-    
-<!-- foto original -->
-    <figure class="foto" data-tags="kaua normal original">
-      <figcaption>Kaua original</figcaption>
-        <img src="fotos/Fotos - kaua/kaua.png" alt="Kaua" width="300" height="300"> 
-    </figure>
-    
- <!-- foto careca -->
-     <figure class="foto" data-tags="kaua careca">
-                <figcaption>Kauã Careca</figcaption>
-          <img src="fotos/Fotos - kaua/kauacareca.png" alt="kaua careca" width="300" height="300"> 
+
+      <!-- Álbum do Nicolas. -->
+      <div class="album" data-album="fotos-nicolas" onclick="abrir_album('fotos-nicolas')">
+        <img src="fotos/Fotos - Nicolas/NicolasPoseAura.jpg" alt="Nicolas" width="300" height="300">
+        <h3>FOTOS - NICOLAS</h3>
+      </div>
+    </div>
+
+    <!-- Conteúdo do álbum de fotos do Kauã, inicialmente oculto pelo CSS. -->
+    <div id="fotos-kaua" class="FotosKaua fotos-album">
+      <!-- Retorna para a lista de álbuns. -->
+      <button id="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
+
+      <!-- Foto original. -->
+      <figure class="foto" data-tags="kaua normal original">
+        <figcaption>Kaua original</figcaption>
+        <img src="fotos/Fotos - kaua/kaua.png" alt="Kaua" width="300" height="300">
       </figure>
-    
-<!-- kaua desenhando no passeio -->
+
+      <!-- Foto do Kauã careca. -->
+      <figure class="foto" data-tags="kaua careca">
+        <figcaption>Kauã Careca</figcaption>
+        <img src="fotos/Fotos - kaua/kauacareca.png" alt="kaua careca" width="300" height="300">
+      </figure>
+
+      <!-- Kauã desenhando no passeio. -->
       <figure class="foto" data-tags="kaua desenhando passeio">
         <figcaption>Kauã desenhando</figcaption>
         <img src="fotos/Fotos - kaua/kaua_desenhando.jpg" alt="kaua desenhando passeio" width="300" height="300">
-       </figure>
+      </figure>
 
-    <!-- pés do kaua -->
-             <figure class="foto" data-tags="pés kaua borrado">
+      <!-- Pés do Kauã. -->
+      <figure class="foto" data-tags="pés kaua borrado">
         <figcaption>Kauã pés borrado</figcaption>
-        <img src="fotos/Fotos - kaua/20260818_190801.jpg" alt="kaua pés borrado mercado " width="300" height="300"  >
-       </figure>
-    
-<!-- kaua estudando na sala -->
-          <figure class="foto" data-tags="kaua estudando sala aula">
+        <img src="fotos/Fotos - kaua/20260818_190801.jpg" alt="kaua pés borrado mercado" width="300" height="300">
+      </figure>
+
+      <!-- Kauã estudando na sala. -->
+      <figure class="foto" data-tags="kaua estudando sala aula">
         <figcaption>Kauã estudando</figcaption>
-        <img src="fotos/Fotos - kaua/kaua estudando.jpg" alt="kaua estudando sala aula" width="300" height="300"  >
-       </figure>
-    
-      <!-- kaua com amigos -->
-        <figure class="foto" data-tags="kaua amigos escola grupo feliz">
+        <img src="fotos/Fotos - kaua/kaua estudando.jpg" alt="kaua estudando sala aula" width="300" height="300">
+      </figure>
+
+      <!-- Kauã com amigos. -->
+      <figure class="foto" data-tags="kaua amigos escola grupo feliz">
         <figcaption>Kauã com amigos</figcaption>
-        <img src="fotos/Fotos - kaua/kaua com amigos.jpg" alt="kaua com amigos" width="300" height="300"  >
-       </figure>
+        <img src="fotos/Fotos - kaua/kaua com amigos.jpg" alt="kaua com amigos" width="300" height="300">
+      </figure>
 
-  <!-- kaua apannhando do henry passeio -->
-        <figure class="foto" data-tags="kaua briga amigos henry passeio apanhando">
+      <!-- Kauã apanhando do Henry no passeio. -->
+      <figure class="foto" data-tags="kaua briga amigos henry passeio apanhando">
         <figcaption>Kauã apanhando do Henry</figcaption>
-        <img src="fotos/Fotos - kaua/kaua apanhando do henry.jpg" alt="kaua apanhando" width="300" height="300"  >
-       </figure>
+        <img src="fotos/Fotos - kaua/kaua apanhando do henry.jpg" alt="kaua apanhando" width="300" height="300">
+      </figure>
+    </div>
 
-  </div>
+    <!-- Conteúdo do álbum de fotos do Nicolas, inicialmente oculto pelo CSS. -->
+    <div id="fotos-nicolas" class="FotosNicolas fotos-album">
+      <!-- Retorna para a lista de álbuns. -->
+      <button id="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
 
-  <!-- nicolas -->
+      <!-- Nicolas 67. -->
+      <figure class="foto" data-tags="nicolas 67">
+        <figcaption>Nicolas</figcaption>
+        <img src="fotos/Fotos - Nicolas/Nicolas67.jpg" alt="Nicolas" width="300" height="300">
+      </figure>
 
-  <div id="fotos-nicolas" class="FotosNicolas fotos-album">
-    <button id="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
+      <!-- Nicolas com cachorro. -->
+      <figure class="foto" data-tags="nicolas cachorro">
+        <figcaption>Nicolas com cachorro</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasCachorro.jpg" alt="Nicolas com cachorro" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas 67 -->
-    <figure class="foto" data-tags="nicolas 67">
-      <figcaption>Nicolas</figcaption>
-      <img src="fotos/Fotos - Nicolas/Nicolas67.jpg" alt="Nicolas" width="300" height="300">
-    </figure>
+      <!-- Nicolas careca. -->
+      <figure class="foto" data-tags="nicolas careca">
+        <figcaption>Nicolas careca</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasCareca.jpg" alt="Nicolas careca" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas com cachorro -->
-    <figure class="foto" data-tags="nicolas cachorro">
-      <figcaption>Nicolas com cachorro</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasCachorro.jpg" alt="Nicolas com cachorro" width="300" height="300">
-    </figure>
+      <!-- Nicolas no celular. -->
+      <figure class="foto" data-tags="nicolas celular">
+        <figcaption>Nicolas no celular</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasCelular.jpg" alt="Nicolas no celular" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas careca -->
-    <figure class="foto" data-tags="nicolas careca">
-      <figcaption>Nicolas careca</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasCareca.jpg" alt="Nicolas careca" width="300" height="300">
-    </figure>
+      <!-- Nicolas e Easter Egg do Kauã. -->
+      <figure class="foto" data-tags="nicolas easter egg kaua">
+        <figcaption>Nicolas e Easter Egg do Kauã</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasEasterEgg Kaua.jpg" alt="Nicolas e Easter Egg do Kauã" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas no celular -->
-    <figure class="foto" data-tags="nicolas celular">
-      <figcaption>Nicolas no celular</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasCelular.jpg" alt="Nicolas no celular" width="300" height="300">
-    </figure>
+      <!-- Nicolas e Esther. -->
+      <figure class="foto" data-tags="nicolas esther">
+        <figcaption>Nicolas e Esther</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasEEsther.jpg" alt="Nicolas e Esther" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas e Easter Egg do Kauã -->
-    <figure class="foto" data-tags="nicolas easter egg kaua">
-      <figcaption>Nicolas e Easter Egg do Kauã</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasEasterEgg Kaua.jpg" alt="Nicolas e Easter Egg do Kauã" width="300" height="300">
-    </figure>
+      <!-- Nicolas e Henry. -->
+      <figure class="foto" data-tags="nicolas henry">
+        <figcaption>Nicolas e Henry</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasEHenry.jpg" alt="Nicolas e Henry" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas e Esther -->
-    <figure class="foto" data-tags="nicolas esther">
-      <figcaption>Nicolas e Esther</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasEEsther.jpg" alt="Nicolas e Esther" width="300" height="300">
-    </figure>
+      <!-- Nicolas e Kauã fazendo careta no carrinho. -->
+      <figure class="foto" data-tags="nicolas kaua careta carrinho">
+        <figcaption>Nicolas e Kauã no carrinho</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasEKauaCaretaCarrinho.jpg" alt="Nicolas e Kauã fazendo careta no carrinho" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas e Henry -->
-    <figure class="foto" data-tags="nicolas henry">
-      <figcaption>Nicolas e Henry</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasEHenry.jpg" alt="Nicolas e Henry" width="300" height="300">
-    </figure>
+      <!-- Nicolas Epstein. -->
+      <figure class="foto" data-tags="nicolas epstein">
+        <figcaption>Nicolas</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasEpstein.jpg" alt="Nicolas" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas e Kauã fazendo careta no carrinho -->
-    <figure class="foto" data-tags="nicolas kaua careta carrinho">
-      <figcaption>Nicolas e Kauã no carrinho</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasEKauaCaretaCarrinho.jpg" alt="Nicolas e Kauã fazendo careta no carrinho" width="300" height="300">
-    </figure>
+      <!-- Nicolas farmando aura. -->
+      <figure class="foto" data-tags="nicolas farmando aura">
+        <figcaption>Nicolas farmando aura</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasFarmandoAura.jpg" alt="Nicolas farmando aura" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas Epstein -->
-    <figure class="foto" data-tags="nicolas epstein">
-      <figcaption>Nicolas</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasEpstein.jpg" alt="Nicolas" width="300" height="300">
-    </figure>
+      <!-- Nicolas, João e Kauã na praia. -->
+      <figure class="foto" data-tags="nicolas joao kaua praia">
+        <figcaption>Nicolas, João e Kauã na praia</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasJoaoKauaPraia.png" alt="Nicolas, João e Kauã na praia" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas farmando aura -->
-    <figure class="foto" data-tags="nicolas farmando aura">
-      <figcaption>Nicolas farmando aura</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasFarmandoAura.jpg" alt="Nicolas farmando aura" width="300" height="300">
-    </figure>
+      <!-- Nicolas em pose de aura. -->
+      <figure class="foto" data-tags="nicolas pose aura">
+        <figcaption>Nicolas em pose de aura</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasPoseAura.jpg" alt="Nicolas em pose de aura" width="300" height="300">
+      </figure>
 
-    <!-- Nicolas, João e Kauã na praia -->
-    <figure class="foto" data-tags="nicolas joao kaua praia">
-      <figcaption>Nicolas, João e Kauã na praia</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasJoaoKauaPraia.png" alt="Nicolas, João e Kauã na praia" width="300" height="300">
-    </figure>
+      <!-- Nicolas tuff. -->
+      <figure class="foto" data-tags="nicolas tuff">
+        <figcaption>Nicolas tuff</figcaption>
+        <img src="fotos/Fotos - Nicolas/NicolasTuff.jpg" alt="Nicolas tuff" width="300" height="300">
+      </figure>
+    </div>
 
-    <!-- Nicolas em pose de aura -->
-    <figure class="foto" data-tags="nicolas pose aura">
-      <figcaption>Nicolas em pose de aura</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasPoseAura.jpg" alt="Nicolas em pose de aura" width="300" height="300">
-    </figure>
-
-    <!-- Nicolas tuff -->
-    <figure class="foto" data-tags="nicolas tuff">
-      <figcaption>Nicolas tuff</figcaption>
-      <img src="fotos/Fotos - Nicolas/NicolasTuff.jpg" alt="Nicolas tuff" width="300" height="300">
-    </figure>
-  </div>
-  
   </body>
 </html>
