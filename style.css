@@ -38,6 +38,7 @@ h3 {
 /* Organiza cada cartão de álbum na vertical. */
 
 .album {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +72,7 @@ h3 {
 /* Exibe e organiza em grade o álbum que está aberto. */
 .fotos-album.aberto {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 315px);
   gap: 24px;
   justify-content: center;
   padding: 20px;
@@ -96,6 +97,19 @@ h3 {
   transition: transform 0.2s ease;
 } 
 
+@media (max-width: 600px) {
+  .albuns {
+    grid-template-columns: repeat(2, 150px);
+  }
+
+  .fotos-album.aberto {
+    grid-template-columns: repeat(2, 150px);
+  }
+
+  .foto {
+    width: 150px;
+  }
+}
 /* .foto:hover { 
   transform: scale(1.05);
 } */
