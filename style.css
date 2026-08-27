@@ -94,6 +94,7 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
+} 
 
 /* .foto:hover { 
   transform: scale(1.05);
@@ -120,7 +121,7 @@ h3 {
 }
 
 /* Estiliza o botão usado para voltar à lista de álbuns. */
-#button_voltar {
+.button_voltar {
   background-color: #14e31b;
   border: 3px solid #0e0000;
   border-radius: 100px;
@@ -134,7 +135,7 @@ h3 {
   cursor: pointer;
 }
 
-#button_voltar:hover {
+.button_voltar:hover {
   /* Destaca o botão quando o cursor passa sobre ele. */
   background-color: #00f400;
 }
