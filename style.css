@@ -105,13 +105,13 @@ h3 {
 
 @media (max-width: 600px) {
   .albuns {
-    grid-template-columns: repeat(2, 120px);
+    grid-template-columns: repeat(2, 190px);
   }
 
   .fotos-album.aberto {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(2, 120px);
+    grid-template-columns: repeat(2, 190px);
     justify-content: center;
     padding: 0px;
   }
@@ -127,16 +127,15 @@ h3 {
       width: 180px;
       height: 180px;
   }
-  .album {
-    width: 120px;
-    height: auto;
-  }
+  
   .album img {
 
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 50%;
   }
 }
+
+
 /* .foto:hover { 
   transform: scale(1.05);
 } */
