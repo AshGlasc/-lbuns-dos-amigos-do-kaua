@@ -32,7 +32,7 @@
     <input type="text" id="busca" class="busca" placeholder="Buscar foto fofinha" onkeyup="filtrar()">
 
     <!-- Título da área que reúne os cartões dos álbuns. -->
-    <h3>Hub de fotos</h3>
+    <h3 id="titulo-album">Hub de fotos</h3>
 
     <!-- Cartões usados para escolher qual álbum será aberto. -->
     <div class="albuns">
@@ -52,7 +52,7 @@
     <!-- Conteúdo do álbum de fotos do Kauã, inicialmente oculto pelo CSS. -->
     <div id="fotos-kaua" class="FotosKaua fotos-album">
       <!-- Retorna para a lista de álbuns. -->
-      <button id="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
+      <button class="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
 
       <!-- Foto original. -->
       <figure class="foto" data-tags="kaua normal original">
@@ -100,7 +100,7 @@
     <!-- Conteúdo do álbum de fotos do Nicolas, inicialmente oculto pelo CSS. -->
     <div id="fotos-nicolas" class="FotosNicolas fotos-album">
       <!-- Retorna para a lista de álbuns. -->
-      <button id="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
+      <button class="button_voltar" type="button" onclick="mostrar_albuns()">voltar</button>
 
       <!-- Nicolas 67. -->
       <figure class="foto" data-tags="nicolas 67">
