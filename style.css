@@ -39,8 +39,6 @@ h3 {
 }
 
 
-
-
 /* Organiza cada cartão de álbum na vertical. */
 
 .album {
@@ -103,11 +101,12 @@ h3 {
   transition: transform 0.2s ease;
 } 
 
+/* ajuste de tela se tiver menos de 600px */
 @media (max-width: 600px) {
   .albuns {
     grid-template-columns: repeat(2, 190px);
   }
-
+/* distancia e posição das fotos dentro do album */
   .fotos-album.aberto {
     display: grid;
     grid-template-columns: repeat(2, 190px);
@@ -116,25 +115,25 @@ h3 {
     gap: 10px;
     row-gap: 20px;
   }
-
+/* tamanho do background da imagem e distancia das bordas so site */
   .foto {
     width: 185px;
     height: auto;
     margin: 0px;
   }
-  /* .foto figcaption {
-    font-size: 16px;
-  } */
+  /* tamanho da imagem */
     .foto img {
       width: 170px;
       height: 170px;
   }
   
+/* tamanho da capa do album */
   .album img {
 
     width: 100%;
     height: 50%;
   }
+  /* tamanho do botão hub de fotos */
   #titulo-album {
     width: 93%;
   }
