@@ -1,12 +1,12 @@
-/* Define a fonte padrão usada em toda a página. */
 body {
   font-family: Arial, sans-serif;
 }
 
-/* Estiliza o campo de busca. */
+#fotos-origem {
+  display: none;
+}
 
 #busca {
-  /* Centraliza o campo e cria espaço interno para o texto. */
   display: block;
   margin: 20px auto;
   padding: 8px 12px;
@@ -14,16 +14,12 @@ body {
   border: 2px solid #0e0000;
   border-radius: 100px;
 
-  /* Suaviza a mudança de cor ao passar o cursor. */
   transition: background-color 0.3s ease;
 }
 
-/* Altera a cor do campo quando o cursor passa sobre ele. */
 #busca:hover {
   background-color: #cdcfcdce;
 }
-/* Estiliza o título da área principal de álbuns. */ 
-
 h3 {
   margin-top: 33px;
   font-size: 35px;
@@ -39,8 +35,6 @@ h3 {
 }
 
 
-/* Organiza cada cartão de álbum na vertical. */
-
 .album {
 
   display: flex;
@@ -51,7 +45,6 @@ h3 {
 }
 
 .albuns {
-  /* Cria uma grade com três colunas de 300 pixels. */
   display: grid;
   grid-template-columns: repeat(3, 300px);
   gap: 24px;
@@ -59,21 +52,13 @@ h3 {
 }
 
 .albuns.oculto {
-  /* Esconde a lista enquanto um álbum está aberto. */
   display: none;
 }
 
-/* Mantém cartões marcados como escondidos fora da tela. */
-.album.escondido {
-  display: none;
-}
-
-/* Oculta os conteúdos dos álbuns até que sejam selecionados. */
 .fotos-album {
   display: none;
 }
 
-/* Exibe e organiza em grade o álbum que está aberto. */
 .fotos-album.aberto {
   display: grid;
   grid-template-columns: repeat(3, 315px);
@@ -83,7 +68,6 @@ h3 {
 }
 
 .fotos-album button {
-  /* Faz o botão ocupar toda a largura da grade e ficar centralizado. */
   grid-column: 1 / -1;
   justify-self: center;
   padding: 8px 16px;
@@ -91,7 +75,6 @@ h3 {
 }
 
 .foto {
-  /* Define o tamanho e a aparência de cada cartão de foto. */
   width: 315px;
   box-sizing: border-box;
   background: #49ef97;
@@ -101,12 +84,10 @@ h3 {
   transition: transform 0.2s ease;
 } 
 
-/* ajuste de tela se tiver menos de 600px */
 @media (max-width: 600px) {
   .albuns {
     grid-template-columns: repeat(2, 190px);
   }
-/* distancia e posição das fotos dentro do album */
   .fotos-album.aberto {
     display: grid;
     grid-template-columns: repeat(2, 190px);
@@ -115,56 +96,39 @@ h3 {
     gap: 10px;
     row-gap: 20px;
   }
-/* tamanho do background da imagem e distancia das bordas so site */
   .foto {
     width: 185px;
     height: auto;
     margin: 0px;
   }
-  /* tamanho da imagem */
     .foto img {
       width: 170px;
       height: 170px;
   }
   
-/* tamanho da capa do album */
   .album img {
 
     width: 100%;
     height: 50%;
   }
-  /* tamanho do botão hub de fotos */
   #titulo-album {
     width: 93%;
   }
 }
 
 
-/* .foto:hover { 
-  transform: scale(1.05);
-} */
-
 .foto img {
-  /* Remove espaços extras da imagem e arredonda seus cantos. */
   display: block;
   border-radius: 8px;
 }
 
 .foto figcaption {
-  /* Formata a legenda apresentada abaixo de cada imagem. */
   margin-top: 8px;
   font-size: 20px;
   color: #000;
   text-align: center;
 }
 
-/* Amplia a foto quando o JavaScript adiciona a classe "grande". */
-.grande:hover {
-  transform: scale(1.6);
-  transition: 0.6s;
-}
-
-/* Estiliza o botão usado para voltar à lista de álbuns. */
 .button_voltar {
   background-color: #14e31b;
   border: 3px solid #0e0000;
@@ -180,6 +144,5 @@ h3 {
 }
 
 .button_voltar:hover {
-  /* Destaca o botão quando o cursor passa sobre ele. */
   background-color: #00f400;
 }
